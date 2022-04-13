@@ -1,4 +1,5 @@
 import React from 'react';
+import './imageList.css';
 
 class SearchBar extends React.Component {
   state = { term: '' };
@@ -9,20 +10,22 @@ class SearchBar extends React.Component {
   };
   render() {
     return (
-      <div className="ui segment">
-        <form
-          onSubmit={(event) => this.onFormSubmit(event)}
-          className="ui form"
-        >
-          <div className="field">
-            <label>Image Search</label>
-            <input
-              type="text"
-              value={this.state.term}
-              onChange={(e) => this.setState({ term: e.target.value })}
-            />
-          </div>
-        </form>
+      <div className="ui segment ">
+        <div>
+          <form
+            onSubmit={(event) => this.onFormSubmit(event)}
+            className="ui form"
+          >
+            <div className="field">
+              <label>Image Search</label>
+              <input
+                type="text"
+                value={this.state.term}
+                onChange={(e) => this.setState({ term: e.target.value })}
+              />
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
